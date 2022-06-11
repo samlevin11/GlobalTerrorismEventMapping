@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="initial-scale=1,maximum-scale=1,user-scalable=no"
+        />
+        <title>Terrorist Group Events Distribution</title>
+
+        <link
+            rel="stylesheet"
+            href="https://js.arcgis.com/4.10/esri/themes/dark/main.css"
+        />
+        <script src="https://js.arcgis.com/4.9/"></script>
+
+        <style>
+            html,
+            body,
+            #viewDiv {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #selectionDiv {
+                background-color: rgb(36, 36, 36);
+                color: rgb(209, 209, 209);
+                padding: 6px;
+                width: 330px;
+                font-family: sans-serif;
+            }
+
+            #resultStatsDiv {
+                background-color: rgb(36, 36, 36);
+                color: rgb(209, 209, 209);
+                padding: 6px;
+                font-family: sans-serif;
+            }
+
+            #titleDiv {
+                background-color: rgb(36, 36, 36);
+                color: rgb(209, 209, 209);
+                padding: 6;
+                width: 330px;
+                font-size: large;
+                font-family: sans-serif;
+            }
+        </style>
+        <script src="eventAnalysis.js"></script>
+    </head>
+
+    <body>
+        <div id="viewDiv"></div>
+        <div id="titleDiv">Terrorist Group Activity</div>
+        <div id="selectionDiv">
+            Select Terrorist Group:
+            <select id="group-name"></select>
+            <br />
+            Select Year:
+            <select id="yr"></select>
+            <br />
+            <button id="trackActivity">View Activity</button>
+            <br />
+            <div id="resultStatsDiv"></div>
+            <br />
+            Find Related Events:
+            <input id="related" />
+            <button id="trackRelated">View Related</button>
+            <br />
+            <div id="relatedStatsDiv"></div>
+            <br />
+            <button id="reset">Reset Results</button>
+        </div>
+    </body>
+</html>
